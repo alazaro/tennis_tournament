@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block image %}
+{% if tournament.imagen %}
+<div class="span-8 colborder">
+    <img src="{{ tournament.imagen }}" alt="{{ tournament.nombre }}" />
+</div>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div>Por favor, introduzca su número de licencia para ver el horario.</div>
+<form id="id_form_license" name="form_license" method="GET" action="{% url timetable %}">{% csrf_token %}
+    <input type="text" id="input_license" name="license" />
+    <input type="submit" id="submit_license" value="Ver horario">
+    <input type="hidden" name="tid" id="input_tid" value="{{ tournament.id }}" />
+</form>
+{% endblock %}
+
+{% block error %}
+    {% if error %}{% include 'includes/error.html' %}{% endif %}
+{% endblock %}
+
+{% block js %}
+{{ block.super }}
+<script>
+$(document).ready(function() {
+    $("#submit_license").click(function(event) {
+        event.preventDefault();
+        $.get('{% url timetable %}',
+            {
+                'license': $("#input_license").val(),
+                'tid': $("#input_tid").val(),
+            },
+            function(data) {$("#matches").html(data);}
+        );
+    });
+});
+
+</script>
+{% endblock %}

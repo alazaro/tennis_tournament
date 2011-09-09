@@ -1,0 +1,15 @@
+<h3>Partidos:</h3>
+<table id="hor-minimalist-b">
+    <thead><tr><th>Hora</th><th>Jugador 1</th><th>Jugador 2</th></tr></thead>
+    <tbody>
+        {% for match in matches %}
+        {% with match.match_time as match_time and match.player1 as player1 and match.player2 as player2 %}
+        <tr>
+            <td>{{ match_time|date:"d \de F \de Y" }} a las {{ match_time|date:"H:i" }}</td>
+            <td>{{ player1 }}</td>
+            <td>{{ player2 }}</td>
+        </tr>
+        {% endwith %}
+        {% endfor %}
+    </tbody>
+</table>

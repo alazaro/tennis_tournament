@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+{% block content %}
+<h2>Listado de Partidos</h2>
+{% for item in full_list %}
+<h3>Categoría: {{ itemcategory.name }}</h3>
+<table id="hor-minimalist-b">
+    <thead><tr><th>Hora</th><th>Jugador 1</th><th>Jugador 2</th></tr></thead>
+    <tbody>
+        {% for elem in item.matches %}
+        {% with elem.match.player1 as player1 and elem.match.player2 as player2 and elem.saw1 as saw1 and elem.saw2 as saw2 and elem.match.match_time as match_time %}
+        <tr>
+            <td>{{ match_time|date:"d \de F \de Y" }} a las {{ match_time|date:"H:i" }}</td>
+            <td class="{% if saw1 %}ok{% else %}error{% endif %}">{{ player1 }}</td>
+            <td class="{% if saw2 %}ok{% else %}error{% endif %}">{{ player2 }}</td>
+        </tr>
+        {% endwith %}
+        {% endfor %}
+    </tbody>
+</table>
+<hr class="space" />
+{% endfor %}
+{% endblock %}

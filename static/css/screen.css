@@ -1,0 +1,68 @@
+body {
+    background: url('../img/bg.png');
+}
+
+.bg_container {
+    background: rgba(255, 255, 255, 0.7);
+    width: 980px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.box {
+    background: #fdf6e3; /* Old browsers */
+    background: -moz-linear-gradient(top, #fdf6e3 0%, #fce9b4 50%, #fce092 51%, #fcf1d2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdf6e3), color-stop(50%,#fce9b4), color-stop(51%,#fce092), color-stop(100%,#fcf1d2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fdf6e3 0%,#fce9b4 50%,#fce092 51%,#fcf1d2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fdf6e3 0%,#fce9b4 50%,#fce092 51%,#fcf1d2 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #fdf6e3 0%,#fce9b4 50%,#fce092 51%,#fcf1d2 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdf6e3', endColorstr='#fcf1d2',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #fdf6e3 0%,#fce9b4 50%,#fce092 51%,#fcf1d2 100%); /* W3C */
+    border: 1px #fce9b4 solid;
+    -ms-box-shadow: 3px 3px 2px #CCC;
+    -o-box-shadow: 3px 3px 2px #CCC;
+    -webkit-box-shadow: 3px 3px 2px #CCC;
+    -moz-box-shadow: 3px 3px 2px #CCC;
+    box-shadow: 3px 3px 2px #CCC;
+}
+
+table, td, th, thead th, tbody td, tbody tr:nth-child(n) td {
+    background: none;
+}
+
+td.ok {
+    background: #E6EFC2 !important;
+    border: none;
+}
+
+td.error {
+    background: #FBE3E4 !important;
+    border: none;
+}
+
+#hor-minimalist-b {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-collapse: collapse;
+    font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+    text-align: left;
+    -ms-box-shadow: 3px 3px 2px #CCC;
+    -o-box-shadow: 3px 3px 2px #CCC;
+    -webkit-box-shadow: 3px 3px 2px #CCC;
+    -moz-box-shadow: 3px 3px 2px #CCC;
+    box-shadow: 3px 3px 2px #CCC;
+}
+#hor-minimalist-b th {
+    border-bottom: 2px solid #6678B1;
+    color: #003399;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 8px;
+}
+#hor-minimalist-b td {
+    border-bottom: 1px solid #CCCCCC;
+    color: #666699;
+    padding: 6px 8px;
+}
+#hor-minimalist-b tbody tr:hover td {
+    color: #000099;
+}
