@@ -33,6 +33,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.staticfiles',
     'djangotoolbox',
+    'permission_backend_nonrel',
     'autoload',
     'dbindexer',
     'filetransfers',
@@ -49,6 +50,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+)
+
+AUTHENTICATION_BACKENDS = (
+    'permission_backend_nonrel.backends.NonrelPermissionBackend',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

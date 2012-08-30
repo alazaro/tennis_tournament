@@ -3,6 +3,15 @@ Tournaments
 
 Django application made to help manage a tennis tournament.
 
+Demo
+----
+
+There is a demo of this application in http://torneos.alazaro.es
+
+The administration page is http://torneos.alazaro.es/admin
+User: demo
+Password: demo
+
 Background
 ----------
 
